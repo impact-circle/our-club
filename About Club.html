@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact Circle | ISET Kelibia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at bottom, #0c0c0c 40%, #000);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .poster {
+      background: #0a0a0a;
+      border: 2px solid #222;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+      padding: 30px 25px;
+      max-width: 420px;
+      text-align: center;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Glow dots (top right corner) */
+    .dots {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 6px);
+      gap: 4px;
+    }
+
+    .dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: gold;
+      opacity: 0.8;
+    }
+
+    h2 {
+      color: gold;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-family: "Great Vibes", cursive;
+      color: #ffdb4d;
+      font-size: 40px;
+      text-shadow: 0 0 15px #ffdb4d;
+      margin: 5px 0 10px;
+    }
+
+    h3 {
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .content {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 15px 18px;
+      line-height: 1.8;
+      font-size: 14px;
+      text-align: right;
+      direction: rtl;
+      margin-top: 10px;
+    }
+
+    .content strong {
+      color: gold;
+    }
+
+    ul {
+      list-style: none;
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    ul li {
+      margin: 6px 0;
+    }
+
+    ul li::before {
+      content: "⭐ ";
+      color: gold;
+    }
+
+    .footer {
+      margin-top: 20px;
+      border-top: 1px solid #333;
+      padding-top: 10px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .qr {
+      width: 80px;
+      height: 80px;
+      border: 2px solid gold;
+      border-radius: 8px;
+      background: url('qr-code.png') center/cover no-repeat;
+    }
+
+    .info {
+      flex: 1;
+      margin-left: 15px;
+      text-align: left;
+    }
+
+    .info p {
+      margin-bottom: 6px;
+    }
+
+    .logo {
+      font-size: 42px;
+      color: gold;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="poster">
+    <div class="dots">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <h2>WELCOME TO OUR CLUB</h2>
+    <h1>impact circle</h1>
+    <h3>ISET KELIBIA</h3>
+
+    <div class="content">
+      <p>عندك طموح؟ تحب تخرج النسخة القوية منك؟ <br>
+      راهو الفرصة بين يديك 😎 <br>
+      هذا هو المكان وين الأفكار تولي واقع و الناس العادية تولي مبدعة ✨</p>
+      <p><strong>فـرصـتـك معانـا 👇</strong></p>
+      <ul>
+        <li>VIDEO EDITING 🎥</li>
+        <li>BODY LANGUAGE 🗣️</li>
+        <li>PHOTOSHOP 🎨</li>
+        <li>ROBOTIQUE 🤖</li>
+        <li>ENTREPRENARIAT 💡</li>
+      </ul>
+      <p>عالم جديد، فكر، خدمة، هدف 💫<br>
+      معناها البداية توّا متستناش!</p>
+    </div>
+
+    <div class="footer">
+      <div class="qr"></div>
+      <div class="info">
+        <p>SCAN ME</p>
+        <p><strong>PLUS D’INFORMATIONS SUR</strong></p>
+      </div>
+      <div class="logo">IC</div>
+    </div>
+  </div>
+
+</body>
+</html>
