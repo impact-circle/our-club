@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact Circle - Formulaire d'inscription</title>
+  <link rel="stylesheet" href="../css/JOIN_US.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-card">
+      
+      <!-- Header / Full-width logo -->
+      <div class="logo-header">
+        <img src="../assets/impactclub.jpg" alt="Impact Circle Logo">
+      </div>
+
+      <div class="form-content">
+        <h1>Impact Circle – Membership Form</h1>
+        <p>Complétez les détails ci-dessous pour rejoindre notre club !</p>
+        
+        <form>
+          <label>Nom et Prénom *</label>
+          <input type="text" placeholder="Votre réponse" required>
+
+          <label>E-mail *</label>
+          <input type="email" placeholder="Votre réponse" required>
+
+          <label>Numéro de téléphone *</label>
+          <input type="tel" placeholder="Votre réponse" required>
+
+          <label>Département *</label>
+          <select required>
+            <option value="">Choisissez...</option>
+            <option>Technologie d'informatique</option>
+            <option>Génie mécanique</option>
+            <option>Génie des Procédés</option>
+          </select>
+
+          <label>Quelles sont vos compétences (المواهب) ?</label>
+          <textarea rows="3" placeholder="Votre réponse"></textarea>
+
+          <label>Pourquoi voulez-vous rejoindre 'Impact Circle' ?</label>
+          <textarea rows="3" placeholder="Votre réponse"></textarea>
+
+          <label>Disponibilité *</label>
+          <div class="radio-group">
+            <label><input type="radio" name="dispo" required> Jours de semaine (après les cours)</label>
+            <label><input type="radio" name="dispo"> Occasionnel (selon l’événement)</label>
+            <label><input type="radio" name="dispo"> Week-ends</label>
+          </div>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

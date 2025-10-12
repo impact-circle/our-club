@@ -1,0 +1,128 @@
+/* Background like your Impact Circle site */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #2d2100, #b78700);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container */
+.container {
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+}
+
+/* Card style */
+.form-card {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 25px;
+  overflow: hidden; /* important for logo top rounding */
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+/* Full-width logo header */
+.logo-header {
+  width: 100%;
+  background: #000; /* fallback */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-header img {
+  width: 100%;         /* full width of form */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Form content */
+.form-content {
+  padding: 40px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Form inputs */
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #1e1e1e;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 1px solid #d4af37;
+}
+
+/* Radios */
+.radio-group {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.radio-group input {
+  accent-color: #d4af37;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  background: #d4af37;
+  color: black;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #b78700;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-content {
+    padding: 25px;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+}
