@@ -1,53 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>More Informations - Impact Cercle</title>
   <link rel="stylesheet" href="../css/MoreInfo.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
   <header>
-    <h1>MORE INFORMATIONS</h1>
-    <p>Learn more about Impact Cercle and our initiatives</p>
+    <h1 data-en="MORE INFORMATIONS" data-fr="PLUS D'INFORMATIONS">MORE INFORMATIONS</h1>
+    <p data-en="Learn more about Impact Cercle and our initiatives"
+       data-fr="En savoir plus sur Impact Cercle et nos initiatives">
+      Learn more about Impact Cercle and our initiatives
+    </p>
   </header>
 
   <section class="info-section">
     <div class="info-card">
-      <h2>Our Mission</h2>
-      <p>
+      <h2 data-en="Our Mission" data-fr="Notre Mission">Our Mission</h2>
+      <p data-en="Impact Cercle aims to create a dynamic environment for students to develop leadership, creativity, and teamwork."
+         data-fr="Impact Cercle vise à créer un environnement dynamique permettant aux étudiants de développer le leadership, la créativité et le travail d’équipe.">
         Impact Cercle aims to create a dynamic environment for students to develop leadership, creativity, and teamwork.
+      </p>
+      <p data-en="We focus on building impactful projects that benefit both our community and student life at ISET Kelibia."
+         data-fr="Nous nous concentrons sur la réalisation de projets à fort impact qui bénéficient à notre communauté et à la vie étudiante de l’ISET Kelibia.">
         We focus on building impactful projects that benefit both our community and student life at ISET Kelibia.
       </p>
     </div>
 
     <div class="info-card">
-      <h2>Our Vision</h2>
-      <p>
+      <h2 data-en="Our Vision" data-fr="Notre Vision">Our Vision</h2>
+      <p data-en="We aspire to become a leading student organization recognized for innovation, collaboration, and positive change."
+         data-fr="Nous aspirons à devenir une organisation étudiante de premier plan reconnue pour son innovation, sa collaboration et son impact positif.">
         We aspire to become a leading student organization recognized for innovation, collaboration, and positive change.
+      </p>
+      <p data-en="Through events, workshops, and community projects, we empower students to make a real difference."
+         data-fr="À travers des événements, des ateliers et des projets communautaires, nous donnons aux étudiants les moyens d’agir.">
         Through events, workshops, and community projects, we empower students to make a real difference.
       </p>
     </div>
 
     <div class="info-card">
-      <h2>Achievements</h2>
+      <h2 data-en="Achievements" data-fr="Réalisations">Achievements</h2>
       <ul>
-        <li>Organized multiple social and environmental awareness campaigns</li>
-        <li>Collaborated with local NGOs and institutions for impactful projects</li>
-        <li>Hosted student innovation and entrepreneurship events</li>
+        <li data-en="Organized multiple social and environmental awareness campaigns"
+            data-fr="Organisation de plusieurs campagnes de sensibilisation sociale et environnementale">
+          Organized multiple social and environmental awareness campaigns
+        </li>
+        <li data-en="Collaborated with local NGOs and institutions for impactful projects"
+            data-fr="Collaboration avec des ONG et institutions locales pour des projets à fort impact">
+          Collaborated with local NGOs and institutions for impactful projects
+        </li>
+        <li data-en="Hosted student innovation and entrepreneurship events"
+            data-fr="Organisation d’événements sur l’innovation et l’entrepreneuriat étudiant">
+          Hosted student innovation and entrepreneurship events
+        </li>
       </ul>
     </div>
 
     <div class="info-card">
-      <h2>Get Involved</h2>
-      <p>
+      <h2 data-en="Get Involved" data-fr="Participez">Get Involved</h2>
+      <p data-en="Want to join or collaborate with us? Stay connected through our social media or reach out to our team directly."
+         data-fr="Envie de nous rejoindre ou de collaborer ? Restez connectés via nos réseaux sociaux ou contactez notre équipe.">
         Want to join or collaborate with us? Stay connected through our social media or reach out to our team directly.
       </p>
-      <a href="contact.html" class="btn">Contact Us</a>
+      <a href="contact.html" class="btn" data-en="Contact Us" data-fr="Contactez-nous">Contact Us</a>
     </div>
   </section>
+
+  <div id="translate-hint">Tap to switch language</div>
+
+  <button id="translate-btn" aria-label="Translate content">
+    <span class="flag">🇫🇷</span>
+    <span id="translate-label">Français</span>
+  </button>
+
+  <script>
+    const btn = document.getElementById('translate-btn');
+    const label = document.getElementById('translate-label');
+    let isFrench = false;
+
+    // set initial (English) text for all elements with data-en/data-fr
+    function setLanguage(french) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const en = el.getAttribute('data-en') || '';
+        const fr = el.getAttribute('data-fr') || en;
+        el.textContent = french ? fr : en;
+      });
+
+      // update button visuals
+      if (french) {
+        label.textContent = 'English';
+        btn.querySelector('.flag').textContent = '🇬🇧';
+        // keep isFrench true
+        isFrench = true;
+      } else {
+        label.textContent = 'Français';
+        btn.querySelector('.flag').textContent = '🇫🇷';
+        isFrench = false;
+      }
+    }
+
+    // initialize page
+    setLanguage(false);
+
+    // toggle on click
+    btn.addEventListener('click', () => setLanguage(!isFrench));
+  </script>
 </body>
 </html>
